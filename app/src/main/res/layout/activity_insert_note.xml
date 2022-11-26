@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.InsertNoteActivity">
+
+    <EditText
+        android:id="@+id/addTitleTextBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:background="@drawable/edit_text_background"
+        android:hint="Title"
+        android:padding="15dp"
+        android:fontFamily="@font/sans_regular"
+        android:textColor="@color/Grey"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addSUBtitlebox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:padding="15dp"
+        android:background="@drawable/edit_text_background"
+        android:inputType="textPersonName"
+        android:hint="Subtitle"
+        android:fontFamily="@font/sans_regular"
+        android:textColor="@color/Grey"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addTitleTextBox" />
+
+    <LinearLayout
+
+        android:id="@+id/proritybox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center_vertical"
+
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/addSUBtitlebox"
+        app:layout_constraintBottom_toTopOf="@id/addNOTEbox"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Priority"
+            android:textColor="@color/Grey"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/sans_regular"
+            android:layout_margin="16dp"
+            android:textSize="18dp"/>
+
+        <ImageView
+            android:id="@+id/greenPCIRCLE"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/done_blackk"
+            android:background="@drawable/grreen_circle" />
+        <ImageView
+            android:id="@+id/yellowPCIRCLE"
+            android:layout_width="20dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_height="20dp"
+            android:background="@drawable/yellow_circle" />
+        <ImageView
+            android:id="@+id/redPCRICLE"
+            android:layout_width="20dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_height="20dp"
+            android:background="@drawable/red_circle" />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/addNOTEbox"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/edit_text_background"
+        android:ems="10"
+        android:fontFamily="@font/sans_regular"
+        android:gravity="top"
+        android:hint="Add your note here...."
+        android:inputType="textMultiLine|textPersonName"
+        android:padding="15dp"
+        android:textColor="@color/Grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/proritybox" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/doneFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:borderWidth="0dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/blueNew"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/done" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
